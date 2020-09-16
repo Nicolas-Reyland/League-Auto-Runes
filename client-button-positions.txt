@@ -1,0 +1,43 @@
+- # X, Y # - (client in 1280 x 720)
+play button : 127, 39
+bottom button : 536, 682
+accept button : 643, 555
+
+pvp : 59, 98
+summoner's rift (4) : 127, 216
+Aram (4) : 379, 215
+One for All (4) : 628, 222
+TFT (4) : 868, 217
+
+blind pick : 45, 516
+draft pick : 45, 546
+ranked solo/duo : 45, 576
+ranked flex : 45, 612
+
+left lane option : 483, 476
+right lane option : 575, 476
+lane panel top : 19, 486
+lane panel jungle : 16, 12
+lane panel mid : 528, 21
+lane panel bottom : 1157, 27
+lane panel support : 1234, 486
+lane panel fill : 538, 641
+
+champ select search bar : 781, 107
+champ select first champ : 378, 170
+lock in / ban button : 636, 606
+champ select edit rune page button : 439, 685
+champ select summoner spell 1 : 684, 691
+champ select summoner spell 2 : 737, 684
+cleanse : 624, 474
+exhaust : 685, 467
+flash : 750, 475
+ghost : 801, 473
+heal : 621, 536
+smite : 687, 538
+teleport : 750, 540
+ignite : 806, 537
+barrier : 627, 604
+
+message box : 141, 682
+champ select close rune page : 1163, 72
