@@ -16,7 +16,8 @@ import traceback
 # constant
 collection_offset = (-112, 5)
 dir_path = r'C:\Users\Nicolas\Documents\League Runes'
-command_list = ['exit', 'list', 'blitz', 'blitzo', 'op.gg', 'op.ggo', 'open', 'add', 'rename', 'remove', 'showblitz', 'lane', 'laneo', 'bo', 'b', 'sb', 'l', 'lo', 'e']
+command_list = ['exit', 'list', 'blitz', 'blitzo', 'op.gg', 'op.ggo', 'open', 'add', 'rename', 'remove', 'showblitz', 'lane', 'laneo', 'bo', 'b', 'sb', 'l', 'lo', 'e', 'help', 'h']
+
 sort_key = ['top', 'jungle', 'mid', 'adc', 'support'] # keys = list(sorted(list(l.keys()), key=lambda key: ascii_lowercase.index(key.lower().split()[-1][0])))
 lane_colors = ['#666699', # metallic gray
                '#009933', # jugle green
@@ -248,6 +249,9 @@ def command_handler(command):
         if arg == False:
             return
         set_rune_page(arg, offset=collection_offset)
+    elif command[0] in ['help', 'h']:
+        messagebox.showinfo('Help - List of Commands', ' - ' + '\n - '.join(command_list))
+        return
 
     else:
         # command not found
