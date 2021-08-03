@@ -1,0 +1,6 @@
+pywin32
+pyautoit
+pyperclip
+pillow
+numpy
+selenium
