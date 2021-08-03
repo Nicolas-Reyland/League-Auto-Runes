@@ -18,7 +18,7 @@ collection_offset = (-112, 5)
 dir_path = r'C:\Users\Nicolas\Documents\League Runes'
 command_list = ['exit', 'list', 'blitz', 'blitzo', 'op.gg', 'op.ggo', 'open', 'add', 'rename', 'remove', 'showblitz', 'lane', 'laneo', 'help', 'bo', 'b', 'sb', 'l', 'lo', 'e', 'h']
 
-help_list = {
+help_content = {
     'help': {'alias': ['h'], 'description': 'Show the help content'},
     'list': {'alias': [], 'description': 'List the image/champs, select one and get the image'},
     'blitz': {'alias': ['b'], 'description': 'List all the db/champs, select one and the runes get set'},
@@ -267,7 +267,10 @@ def command_handler(command):
             return
         set_rune_page(arg, offset=collection_offset)
     elif command[0] in ['help', 'h']:
-        messagebox.showinfo('Help - List of Commands', ' - ' + '\n - '.join(command_list))
+        help_str = ''
+        for key,value in help_content.items():
+            help_str += f' * {key}: alias: {", ".join(value["alias"])} descr: {value["description"]}\n'
+        messagebox.showinfo('Help - List of Commands', help_str)
         return
 
     else:
