@@ -16,7 +16,24 @@ import traceback
 # constant
 collection_offset = (-112, 5)
 dir_path = r'C:\Users\Nicolas\Documents\League Runes'
-command_list = ['exit', 'list', 'blitz', 'blitzo', 'op.gg', 'op.ggo', 'open', 'add', 'rename', 'remove', 'showblitz', 'lane', 'laneo', 'bo', 'b', 'sb', 'l', 'lo', 'e', 'help', 'h']
+command_list = ['exit', 'list', 'blitz', 'blitzo', 'op.gg', 'op.ggo', 'open', 'add', 'rename', 'remove', 'showblitz', 'lane', 'laneo', 'help', 'bo', 'b', 'sb', 'l', 'lo', 'e', 'h']
+
+help_list = {
+    'help': {'alias': ['h'], 'description': 'Show the help content'},
+    'list': {'alias': [], 'description': 'List the image/champs, select one and get the image'},
+    'blitz': {'alias': ['b'], 'description': 'List all the db/champs, select one and the runes get set'},
+    'blitzo': {'alias': ['bo'], 'description': 'Same as "blitz", but with not-in-CS offset'},
+    'op.gg': {'alias': [], 'description': '/op.gg [champ] [lane]/ fetch the runes on op.gg, then set them'},
+    'op.ggo': {'alias': [], 'description': 'Same as "op.gg", but with not-in-CS offset'},
+    'open': {'alias': [], 'description': '/open [champ] [lane]/ open the op.gg page of champion'},
+    'add': {'alias': [], 'description': '/add [champ] [lane]/ add the champ runes to the db'},
+    'rename': {'alias': [], 'description': '/rename "[db/champ name]" "[db/new champ name]"/ rename db entry with new name'},
+    'remove': {'alias': [], 'description': '/remove "[db/champ name]"/ removes the db entry with champ name'},
+    'showblitz': {'alias': ['sb'], 'description': '/showblitz [db/champ name]/ show the runes of the db entry'},
+    'lane': {'alias': ['l'], 'description': 'lets you choose the lane, then the champ to set the runes'},
+    'laneo': {'alias': ['lo'], 'description': 'Same as "lane", but with not-in-CS offset'},
+    'exit': {'alias': ['e'], 'description': 'Exit the program'},
+}
 
 sort_key = ['top', 'jungle', 'mid', 'adc', 'support'] # keys = list(sorted(list(l.keys()), key=lambda key: ascii_lowercase.index(key.lower().split()[-1][0])))
 lane_colors = ['#666699', # metallic gray
